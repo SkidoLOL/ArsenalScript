@@ -41,3 +41,12 @@ local Section = Tab:NewSection("Sh#t Esp")
 Section:NewButton("Esp", "Enables Esp", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20ESP.lua"))() --Put LoadString Here
 end)
+
+--Idk
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Script loaded enjoy!",
+Text = "Made By SkidoLOL And qqwizzixxxx", 
+
+Button2 = "Cancel",
+Duration = 30 
+})
