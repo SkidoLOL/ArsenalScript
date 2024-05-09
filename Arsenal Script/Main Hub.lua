@@ -47,6 +47,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Script loaded enjoy!",
 Text = "Made By SkidoLOL And qqwizzixxxx", 
 
-Button2 = "Cancel",
+Button1 = "Cancel",
+Button1 = "Play And Enjoy!",
 Duration = 30 
 })
