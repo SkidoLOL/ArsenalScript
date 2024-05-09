@@ -15,11 +15,11 @@ local Tab = Window:NewTab("Weapons Mods")
 local Section = Tab:NewSection("All Guns And Knifes Mods")
 
 Section:NewButton("Rainbow Skins", "Mades All Weapons Rainbow", function()
-    print("Rainbow Skins") --Put LoadString Here
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rainbow%20Weapons.lua"))() --Put LoadString Here
 end)
 
 Section:NewButton("Guns Cool Settings", "Cool Guns Settings", function()
-    print("GunzSettings") --Put LoadString Here
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GunSettings.lua"))() --Put LoadString Here
 end)
 
 local Tab = Window:NewTab("Aimbot And Silent Aim")
@@ -27,11 +27,11 @@ local Tab = Window:NewTab("Aimbot And Silent Aim")
 local Section = Tab:NewSection("Aims Here")
 
 Section:NewButton("Aimbot", "Enables Aimbot", function()
-    print("Aimbot") --Put LoadString Here
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20AimBot.lua"))() --Put LoadString Here
 end)
 
 Section:NewButton("Silent Aim", "Cool Silent Aim", function()
-    print("Silent Aim") --Put LoadString Here
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Silent%20Aim.lua"))() --Put LoadString Here
 end)
 
 local Tab = Window:NewTab("ESP")
@@ -39,5 +39,5 @@ local Tab = Window:NewTab("ESP")
 local Section = Tab:NewSection("Sh#t Esp")
 
 Section:NewButton("Esp", "Enables Esp", function()
-    print("Esp") --Put LoadString Here
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20ESP.lua"))() --Put LoadString Here
 end)
