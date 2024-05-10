@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ShaddowScripts/Main/main/Library"))()
+local library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Ui%20Lib/Shadow%20Lib.lua"))()
 
 local Main = library:CreateWindow("Main","Crimson")
 
