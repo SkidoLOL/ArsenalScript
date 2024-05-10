@@ -42,12 +42,21 @@ Section:NewButton("Esp", "Enables Esp", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20ESP.lua"))() --Put LoadString Here
 end)
 
+local Tab = Window:NewTab("SPEED BYPASS")
+
+local Section = Tab:NewSection("Speed Bypass Or Fly Idk")
+
+Section:NewButton("Open Gui", "?", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GuiSpeed.lua"))() --Put LoadString Here
+end)
+
+
 --Idk
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Script loaded enjoy!",
 Text = "Made By SkidoLOL And qqwizzixxxx", 
 
-Button1 = "Cancel",
+Button1 = "o0o0o0o",
 Button1 = "Play And Enjoy!",
 Duration = 30 
 })
