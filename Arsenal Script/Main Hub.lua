@@ -1,57 +1,83 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/qqwizzixxxx/qwizzixxxx-Lib/main/Libs/Hub/First(KavoUi).lua"))()
+local library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ShaddowScripts/Main/main/Library"))()
 
-local Window = Library.CreateLib("Cool Arsenal Script", "DarkTheme")
+local Main = library:CreateWindow("Main","Crimson")
 
-local Tab = Window:NewTab("Welcome")
+local tab = Main:CreateTab("Main")
+local tab2 = Main:CreateTab("Visuals")
 
-local Section = Tab:NewSection( "Nice To Meet You " ..game.Players.LocalPlayer.Name.. "!")
-
-Section:NewLabel( "Your Display Name Is: " ..game.Players.LocalPlayer.DisplayName.. "")
-
-Section:NewLabel( "Your Id Name Is: " ..game.Players.LocalPlayer.UserId.. "")
-
-local Tab = Window:NewTab("Weapons Mods")
-
-local Section = Tab:NewSection("All Guns And Knifes Mods")
-
-Section:NewButton("Rainbow Skins", "Mades All Weapons Rainbow", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rainbow%20Weapons.lua"))() --Put LoadString Here
+tab:CreateButton("Aimbot",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20AimBot.lua"))()
 end)
 
-Section:NewButton("Guns Cool Settings", "Cool Guns Settings", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GunSettings.lua"))() --Put LoadString Here
+tab:CreateButton("Silent Aim",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Silent%20Aim.lua"))()
 end)
 
-local Tab = Window:NewTab("Aimbot And Silent Aim")
-
-local Section = Tab:NewSection("Aims Here")
-
-Section:NewButton("Aimbot", "Enables Aimbot", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20AimBot.lua"))() --Put LoadString Here
+tab:CreateButton("Speed Bypass",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GuiSpeed.lua"))()
 end)
 
-Section:NewButton("Silent Aim", "Cool Silent Aim", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Silent%20Aim.lua"))() --Put LoadString Here
+tab:CreateButton("Modded Guns",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GunSettings.lua"))()
 end)
 
-local Tab = Window:NewTab("ESP")
+tab:CreateButton("Mod Bypass",function()
 
-local Section = Tab:NewSection("Sh#t Esp")
+local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, stringlower = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, string.low
 
-Section:NewButton("Esp", "Enables Esp", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20ESP.lua"))() --Put LoadString Here
+if getgenv().ED_AntiKick then
+    return
+end
+
+
+
+local Players, StarterGui, OldNamecall = game:GetService("Players"), game:GetService("StarterGui")
+
+
+getgenv().ED_AntiKick = {
+    Enabled = true, 
+    SendNotifications = true, 
+    CheckCaller = false 
+}
+
+--Main
+
+OldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(...)
+    if (getgenv().ED_AntiKick.CheckCaller and not checkcaller() or true) and stringlower(getnamecallmethod()) == "kick" and ED_AntiKick.Enabled then
+        if getgenv().ED_AntiKick.SendNotifications then
+            StarterGui:SetCore("SendNotification", {
+                Title = "Anti Mod-ban",
+                Text = "The script has successfully intercepted an attempt to ban you.",
+                Icon = "rbxassetid://6238540373",
+                Duration = 2,
+            })
+        end
+
+        return nil
+    end
+
+    return OldNamecall(...)
+end))
+
+if getgenv().ED_AntiKick.SendNotifications then
+    StarterGui:SetCore("SendNotification", {
+        Title = "AntiDetect",
+        Text = "Anti ModBan script loaded!",
+        Icon = "rbxassetid://6238537240",
+        Duration = 3,
+    })
+end
 end)
 
-local Tab = Window:NewTab("SPEED BYPASS")
 
-local Section = Tab:NewSection("Speed Bypass Or Fly Idk")
-
-Section:NewButton("Open Gui", "?", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GuiSpeed.lua"))() --Put LoadString Here
+tab2:CreateButton("ESP",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20ESP.lua"))()
 end)
 
+tab2:CreateButton("Rgb Weapons",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rainbow%20Weapons.lua"))()
+end)
 
---Idk
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Script loaded enjoy!",
 Text = "Made By SkidoLOL And qqwizzixxxx", 
