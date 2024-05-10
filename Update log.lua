@@ -5,4 +5,6 @@
 3. Script Is Still Beta
 11.05.24
 1.Added Speed Bypass
+2.Updated Lib
+3.Added AutoMod-ban Bypasser
 ]]--
