@@ -1,3 +1,5 @@
+print("Loading Public Beta 1.1")
+
 local v0 = tonumber
 local v1 = string.byte
 local v2 = string.char
