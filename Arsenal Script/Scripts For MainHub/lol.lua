@@ -1,5 +1,14 @@
 print("Loading Public Beta 1.3")
 
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Untitled Arsenal Script",
+Text = "Loading Public Beta V1.3", 
+
+Duration = 10 
+})
+
+wait(10)
+
 local v0 = tonumber
 local v1 = string.byte
 local v2 = string.char
