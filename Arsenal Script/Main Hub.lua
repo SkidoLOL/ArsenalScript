@@ -21,6 +21,10 @@ tab:CreateButton("Modded Guns",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GunSettings.lua"))()
 end)
 
+tab:CreateButton("Rejoin Server",function()
+loadstring(game:HttpGet(""))()
+end)
+
 tab:CreateButton("Mod Bypass",function()
 
 local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, stringlower = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, string.low
@@ -78,6 +82,8 @@ tab2:CreateButton("Rgb Weapons",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rainbow%20Weapons.lua"))()
 end)
 
+tab:Show()
+
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Script loaded enjoy!",
 Text = "Made By SkidoLOL And qqwizzixxxx", 
@@ -86,3 +92,4 @@ Button1 = "o0o0o0o",
 Button1 = "Play And Enjoy!",
 Duration = 30 
 })
+
