@@ -25,6 +25,10 @@ tab:CreateButton("Rejoin Server",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rejoin.lua"))()
 end)
 
+tab:CreateButton("Fly Press E",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Mirgarr/fly-script-roblox/main/Fly"))()
+end)
+
 tab:CreateButton("Mod Bypass",function()
 
 local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, stringlower = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, string.low
