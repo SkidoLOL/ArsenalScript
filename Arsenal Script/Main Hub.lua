@@ -22,7 +22,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScrip
 end)
 
 tab:CreateButton("Rejoin Server",function()
-loadstring(game:HttpGet(""))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rejoin.lua"))()
 end)
 
 tab:CreateButton("Mod Bypass",function()
