@@ -7,4 +7,5 @@
 1.Added Speed Bypass
 2.Updated Lib
 3.Added AutoMod-ban Bypasser
+4.Added Rejoin Server Button
 ]]--
