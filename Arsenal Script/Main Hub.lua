@@ -5,6 +5,16 @@ local Main = library:CreateWindow("Untitled Script Arsenal","Crimson")
 local tab = Main:CreateTab("Main")
 local tab2 = Main:CreateTab("Visuals")
 
+local tab3 = Main:CreateTab("Player")
+local tab4 = Main:CreateTab("Weapons")
+
+local tab5 = Main:CreateTab("Game")
+local tab6 = Main:CreateTab("Credits")
+
+tab6:CreateButton("Discord Invite",function()
+setclipboard('https://discord.gg/qkWVWph6ck')
+end)
+
 tab:CreateButton("Aimbot",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20AimBot.lua"))()
 end)
@@ -13,23 +23,27 @@ tab:CreateButton("Silent Aim",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Silent%20Aim.lua"))()
 end)
 
-tab:CreateButton("Speed Bypass",function()
+tab3:CreateButton("Speed Bypass",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GuiSpeed.lua"))()
 end)
 
-tab:CreateButton("Modded Guns",function()
+tab4:CreateButton("Modded Guns",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GunSettings.lua"))()
 end)
 
-tab:CreateButton("Rejoin Server",function()
+tab5:CreateButton("Rejoin Server",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rejoin.lua"))()
 end)
 
-tab:CreateButton("Fly Press E",function()
+tab3:CreateButton("Fly Press E",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Mirgarr/fly-script-roblox/main/Fly"))()
 end)
 
-tab:CreateButton("Mod Bypass",function()
+tab3:CreateButton("Inf Jump",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Inf%20Jump.lua"))()
+end)
+
+tab5:CreateButton("Mod Bypass",function()
 
 local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, stringlower = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, string.low
 
@@ -82,7 +96,7 @@ tab2:CreateButton("ESP",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20ESP.lua"))()
 end)
 
-tab2:CreateButton("Rgb Weapons",function()
+tab4:CreateButton("Rgb Weapons",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rainbow%20Weapons.lua"))()
 end)
 
