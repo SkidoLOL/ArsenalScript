@@ -31,6 +31,10 @@ tab4:CreateButton("Modded Guns",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/GunSettings.lua"))()
 end)
 
+tab4:CreateButton("Inf Ammo",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/InfAmmo.lua"))()
+end)
+
 tab5:CreateButton("Rejoin Server",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Rejoin.lua"))()
 end)
