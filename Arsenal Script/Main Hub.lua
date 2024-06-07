@@ -40,7 +40,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScrip
 end)
 
 tab3:CreateButton("Fly Press E",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Mirgarr/fly-script-roblox/main/Fly"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Fly.lua"))()
 end)
 
 tab3:CreateButton("Inf Jump",function()
@@ -95,6 +95,9 @@ if getgenv().ED_AntiKick.SendNotifications then
 end
 end)
 
+tab5:CreateButton("Name Protect",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/NameProtect.lua"))()
+end)
 
 tab2:CreateButton("ESP",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Scripts%20For%20MainHub/Arsenal%20ESP.lua"))()
