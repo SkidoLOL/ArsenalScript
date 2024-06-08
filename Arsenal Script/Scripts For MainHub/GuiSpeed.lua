@@ -27,9 +27,9 @@ up.Parent = Frame
 up.BackgroundColor3 = Color3.fromRGB(79, 255, 152)
 up.Size = UDim2.new(0, 0, 0, 0)
 up.Font = Enum.Font.SourceSans
-up.Text = "UP"
+up.Text = ""
 up.TextColor3 = Color3.fromRGB(0, 0, 0)
-up.TextSize = 14.000
+up.TextSize = 0.000
 
 down.Name = "down"
 down.Parent = Frame
@@ -37,9 +37,9 @@ down.BackgroundColor3 = Color3.fromRGB(215, 255, 121)
 down.Position = UDim2.new(0, 0, 0.491228074, 0)
 down.Size = UDim2.new(0, 0, 0, 0)
 down.Font = Enum.Font.SourceSans
-down.Text = "DOWN"
+down.Text = ""
 down.TextColor3 = Color3.fromRGB(0, 0, 0)
-down.TextSize = 14.000 
+down.TextSize = 0.000
 
 onof.Name = "onof"
 onof.Parent = Frame
